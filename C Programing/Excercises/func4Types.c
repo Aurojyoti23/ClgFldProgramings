@@ -94,7 +94,7 @@
         // int revNumber(int);
         void revNumber()
         {
-            int n, rem, rev ;
+            int n, rem, rev = 0 ;
             printf("Enter a Number : ");
             scanf("%d", &n);
 
