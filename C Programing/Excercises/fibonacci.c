@@ -1,21 +1,40 @@
 #include <stdio.h>
 
-int fibonacci(int n)
-{
-    int first = 0, second = 1, next;
+// ......   Without Using Recursion   ...... //
 
-    printf("Fibonacci series upto %d terms : ", n);
-    for(int i = 0; i < n; i++)
+// int fibonacci(int n)
+// {
+//     int first = 0, second = 1, next;
+
+//     printf("Fibonacci series upto %d terms : ", n);
+//     for (int i = 0; i < n; i++)
+//     {
+//         printf("%d  ", first); // 0  1   1   2   3   5   8   13  21
+//         next = first + second; // 1  2   3   5   8   13  21  34  55
+//         first = second;        // 1  1   2   3   5   8   13  21  34
+//         second = next;         // 1  2   3   5   8   13  21  34  55
+//     }
+//     printf("\n");
+// }
+
+// ......   Using Recursion   ...... //
+
+void fibonacci(int n)
+{
+    static int first = 0, second = 1, next;
+    if (n > 0)
     {
-        printf("%d  ", first);
-        next = first + second;
-        first = second;
-        second = next;
+        printf("%d  ", first); // 0  1   1   2   3   5   8   13  21
+        next = first + second; // 1  2   3   5   8   13  21  34  55
+        first = second;        // 1  1   2   3   5   8   13  21  34
+        second = next;         // 1  2   3   5   8   13  21  34  55
+        fibonacci(n - 1);
     }
-    printf("\n");
 }
 
-int main() 
+// ......   Main Function   ...... //
+
+int main()
 {
     int nterm;
 
