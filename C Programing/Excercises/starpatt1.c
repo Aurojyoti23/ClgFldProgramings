@@ -45,6 +45,7 @@ int main()
         }
         printf("\n");
     }
+        printf("\n");
     for (int i = rows - 1; i >= 0; i--)
     {
         for (int j = 0; j <= i; j++)
@@ -68,22 +69,22 @@ int main()
     }
 
 
-    // for (int i = 0; i < rows; i++)
-    // {
-    //     for (int j = 0; j < rows; j++)
-    //     {
-    //         if (j < (rows - i) - 1)
-    //         {
-    //             printf(" ");
-    //         }
-    //         else{
-    //             printf("* ");
-    //         }
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = 0; j < rows; j++)
+        {
+            if (j < (rows - i) - 1)
+            {
+                printf(" ");
+            }
+            else{
+                printf("* ");
+            }
 
-    //     }
+        }
 
-    //     printf("\n");
-    // }
+        printf("\n");
+    }
 
     return 0;
 }

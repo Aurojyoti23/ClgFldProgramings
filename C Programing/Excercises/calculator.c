@@ -21,7 +21,7 @@ float divide(float a, float b) {
     }
 }
 
-float rem(float a, float b) {
+int rem(float a, float b) {
     if (b != 0) {
         return (int)a % (int)b; 
     } else {
@@ -37,7 +37,7 @@ int main() {
     printf("Enter Operand1: ");
     scanf("%f", &num1);
 
-    printf("Enter operator (+, -, *, /, %): ");
+    printf("Enter operator (+, -, *, /, %%): ");
     scanf(" %c", &operator);
 
     printf("Enter Operand2: ");
@@ -57,7 +57,7 @@ int main() {
             printf("Result: %.2f\n", divide(num1, num2));
             break;
         case '%':
-            printf("Result: %.2f\n", remainder(num1, num2));
+            printf("Result: %d\n", rem(num1, num2));
             break;
         default:
             printf("Error: Invalid operator.\n");

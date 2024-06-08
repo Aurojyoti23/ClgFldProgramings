@@ -13,7 +13,7 @@ int main()
         if (n % i == 0)
         {
             printf("Number is not prime");
-            flag = 1; 
+            flag = 1;
             break;
         }
     }

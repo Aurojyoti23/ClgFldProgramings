@@ -1,14 +1,16 @@
-onacci(int n)
-// {
-//     int first = 0, second = 1, next;
+ < rows; i++)
+    {
+        for (int j = 0; j < rows; j++)
+        {
+            if (j < (rows - i) - 1)
+            {
+                printf(" ");
+            }
+            else{
+                printf("* ");
+            }
 
-//     printf("Fibonacci series upto %d terms : ", n);
-//     for (int i = 0; i < n; i++)
-//     {
-//         printf("%d  ", first); // 0 1 1 2 3 5 8 13 21
-//         next = first + second; // 1 2 3 5 8 13 21 34 55
-//         first = second;        // 1 1 2 3 5 8 13 21 34
-//         second = next;         // 1 2 3 5 8 13 21 34 55
-//     }
-//     printf("\n");
-// }
+        }
+
+        printf("\n");
+    }
